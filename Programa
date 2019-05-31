@@ -1,0 +1,101 @@
+#include <iostream>
+#include <Windows.h>
+#include <stdio.h>
+using namespace std;
+void gotoxy(int x,int y){  
+      HANDLE hcon;  
+      hcon = GetStdHandle(STD_OUTPUT_HANDLE);  
+      COORD dwPos;  
+      dwPos.X = x;  
+      dwPos.Y= y;  
+      SetConsoleCursorPosition(hcon,dwPos);  
+ }  
+
+main ()
+{
+	setlocale(LC_CTYPE, "Spanish");
+	char nombre1 [35], nombre2[35];
+	int edad,edad2,dia,dia2,mes,mes2;
+	float estatura,estatura2,peso,peso2;
+	gotoxy (15,2);
+	cout <<"Bienvenido a su app de parejas CC"<<endl;
+	gotoxy 	(7,4);
+	cout<<"Recopilaremos los datos de la primer persona"<<endl;
+	gotoxy (5,6);
+	cout<<"Ingrese su nombre:";
+	cin>> nombre1;
+	cout<< "Ingrese su edad:";
+	cin >> edad;
+	cout <<"Ingrese su estatura en metros:";
+	cin >> estatura;
+	cout <<"Ingrese su peso en kilogramos:";
+	cin >>  peso;
+	system ("cls");
+	gotoxy (15,2);
+	cout <<"Introduzca el número que concuerde con su fecha de nacimiento"<<endl;
+	cout<< "1.Del 22 de diciembre al 19 de enero "<<endl;
+	cout << "2. Del 20 de enero al 19 de febrero"<<endl;
+	cout << "3. Del 20 de febrero al 20 de marzo"<<endl;
+	cout <<"4.Del 21 de marzo al 20 de abril  "<<endl;
+	cout << "5. Del 21 de abril al 20 de mayo"<<endl;
+	cout <<"6. Del 21 de mayo al 21 de junio"<<endl;
+	cout <<"7.Del 22  de junio añ 22 de julio "<<endl;
+	cout << "8.Del 23 del julio al 23 de agosto"<<endl;
+	cout <<"9. Del 24 de agosto al 23 de septiembre "<<endl;
+	cout <<"10. Del 24 de septiembre al 22 de octubre"<<endl; 
+	cout <<"11.Del 23 de octubre al 22 de noviembre "<<endl;
+	cout <<"12. Del 23 de noviembre al 21 de diciembre"<<endl;
+	cout <<"¿Qué número del 1 al 12 concuerda con su fecha de nacimiento?"<<endl <<"Respuesta:";
+	cin >> mes;
+	
+	system ("cls");
+	gotoxy 	(7,4);
+	cout<<"Recopilaremos los datos de la segunda persona"<<endl;
+	gotoxy (5,6);
+	cout<<"Ingrese su nombre:";
+	cin>> nombre2;
+	cout<< "Ingrese su edad:";
+	cin >> edad2;
+	cout <<"Ingrese su estatura en metros:";
+	cin >> estatura2;
+	cout <<"Ingrese su peso en kilogramos:";
+	cin >>  peso2;
+	system ("cls");
+	gotoxy (15,2);
+	cout <<"Introduzca el número que concuerde con su fecha de nacimiento"<<endl;
+	cout<< "1.Del 22 de diciembre al 19 de enero "<<endl;
+	cout << "2. Del 20 de enero al 19 de febrero"<<endl;
+	cout << "3. Del 20 de febrero al 20 de marzo"<<endl;
+	cout <<"4.Del 21 de marzo al 20 de abril  "<<endl;
+	cout << "5. Del 21 de abril al 20 de mayo"<<endl;
+	cout <<"6. Del 21 de mayo al 21 de junio"<<endl;
+	cout <<"7.Del 22  de junio añ 22 de julio "<<endl;
+	cout << "8.Del 23 del julio al 23 de agosto"<<endl;
+	cout <<"9. Del 24 de agosto al 23 de septiembre "<<endl;
+	cout <<"10. Del 24 de septiembre al 22 de octubre"<<endl; 
+	cout <<"11.Del 23 de octubre al 22 de noviembre "<<endl;
+	cout <<"12. Del 23 de noviembre al 21 de diciembre"<<endl;
+	cout <<"¿Qué número del 1 al 12 concuerda con su fecha de nacimiento?"<<endl <<"Respuesta:";
+	cin >> mes2;
+	if (mes ==mes2)
+	{
+		if (edad==edad2)
+		{
+			if (estatura==estatura2)
+			{
+				if (peso==peso2)
+				{
+					cout <<"Son CC se pueden casar, gracias"<<endl;
+				}
+			}
+		}
+	}
+	else {
+		cout <<"No son CC sorry not sorry :("<<endl;
+	}
+	return 0;
+	
+	
+	
+	
+}
